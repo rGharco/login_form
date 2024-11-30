@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light_green: #B0FF83;
+    --dark_green: #5D8447;
+}
+
+body {
+    background-image: url(/assets/images/background_img.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.form_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    /*We translate to -50 RELATIVE to the element, so moves to the X by -50% of its width , this is important because
+    When we use top and left we are effectively centering only one corner of our element and not the whole thing by itself
+    Doing this allows us to center it effectively by subtracting its original size and centering it*/
+    transform: translate(-50%, -50%);   
+    width: 740px;
+    height: 462px;
+    background-color: var(--dark_green);
+    border-radius: 45px;
+}
+
+.profile_icon_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -150%);  
+    transform: translate(-50%, -150%);   
+    width: 220px;
+    height: 220px;
+    background-color: var(--light_green);
+    border-radius: 50%;
+}
+
+.profile_icon_container img {
+    padding-left: 23%;
+    padding-top: 5%;
+}
+
+.form_container .input_text_1 {
+    font-family: "Gothic A1", "sans-serif";
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 10px;
+    padding-left: 3.8em;
+    color:black;
+    background-color: var(--light_green);
+    border-radius: 10px;
+    width: 600px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -140%);  
+    transform: translate(-50%, -140%);  
+    background-image: url(/assets/images/label_profile_icon.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 5% 50%;
+}
+
+.form_container .input_text_2 {
+    background-image: url(/assets/images/label_password_icon.png);
+    transform: translate(-50%, 10%);  
+}
+
