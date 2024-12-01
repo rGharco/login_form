@@ -41,12 +41,12 @@ body {
     width: 220px;
     height: 220px;
     background-color: var(--light_green);
-    border-radius: 50%;
+    border-radius: 200px;
 }
 
 .profile_icon_container img {
-    padding-left: 23%;
-    padding-top: 5%;
+    padding-left: 3.3em;
+    padding-top: 1.2em;
 }
 
 .form_container .input_text_1 {
@@ -73,6 +73,76 @@ body {
 
 .form_container .input_text_2 {
     background-image: url(/assets/images/label_password_icon.png);
+    -ms-transform: translate(-50%, 10%);  
     transform: translate(-50%, 10%);  
 }
 
+#checkbox {
+    display: none;
+}
+
+.form_container .custom_checkbox {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/*We use + here because it selects the next element of type label after the class custom checkbox, we want this to happen
+only for this specific label*/
+.form_container .custom_checkbox + label {
+    position: absolute;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: "Gothic A1", "sans-serif";
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--light_green);
+    top: 70%;
+    left: 10%;
+}
+
+.form_container .custom_checkbox + label::before {
+    content: '';
+    margin-right: 0.4em;
+    cursor: pointer;
+    display: inline-block;
+    width: 15px;    
+    height: 15px;
+    background-color: var(--dark_green);
+    border: 2px solid var(--light_green);
+    border-radius: 5px;
+}
+
+.form_container .custom_checkbox:checked + label::before {
+    background-color: var(--light_green);
+}
+
+.form_container .forgot_pass {
+    position: absolute;
+    font-family: "Gothic A1", "sans-serif";
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    color: var(--light_green);
+    top: 70%;
+    left: 62%;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    width: 280px;
+    height: 56px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    -ms-transform: translate(-50%, -140%);  
+    transform: translate(-50%, -140%); 
+    background-color: var(--light_green);
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    font-size: 2em;
+    font-family: "Gothic A1", "sans-serif";
+    letter-spacing: 5px;
+    font-weight: bold;
+}
